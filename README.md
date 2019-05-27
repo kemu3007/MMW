@@ -1,4 +1,4 @@
-# mmv(Money Management Web)
+# MMW(Money Management Web)
 
 ## 概要
 支出をリスト化しタグ別の合計額を知ることができます。
