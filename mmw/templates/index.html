@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    合計額:{{ calc_sum }}
+    {% for tag in all_tag %}
+        , {{ tag.name }}:{{ tag.calc_sum.money__sum }}
+    {% endfor %}
+    <table class="table table-bordered" width="100%">
+        <th>カテゴリー</th>
+        <th>金額</th>
+        <th>購入日</th>
+        <th>備考</th>
+        {% for order in all_order %}
+            <tr>
+                <td>{{ order.tag.name }}</td>
+                <td>{{ order.money }}</td>
+                <td>{{ order.date }}</td>
+                <td>{{ order.contents }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}
